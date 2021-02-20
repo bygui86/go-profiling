@@ -21,11 +21,10 @@ type Monitor struct {
 
 // See https://scene-si.org/2018/08/06/basic-monitoring-of-go-apps-with-the-runtime-package/
 func main() {
-
-	NewMonitor(1)
+	NewRuntimeMonitor(1)
 }
 
-func NewMonitor(duration int) {
+func NewRuntimeMonitor(duration int) {
 	var m Monitor
 	var rtm runtime.MemStats
 	var interval = time.Duration(duration) * time.Second
